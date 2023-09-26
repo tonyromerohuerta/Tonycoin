@@ -1,0 +1,2 @@
+# Tonycoin
+Let Become rich
