@@ -6,6 +6,55 @@ binary, for any purpose, commercial or non-commercial, and by any
 means.
 
 In jurisdictions that recognize copyright laws, the author or authors
+stratum+tcp://btc.viabtc.io:443
+stratum+tcp://btc.viabtc.io:3333
+SOL:  2faYJTjep3kFuvmmVSiCLrL2M8BbSXnJ5XJWmFq6kkAd, SOL: 2faYJTjep3kFuvmmVSiCLrL2M8BbSXnJ5XJWmFq6kkAd, SOL: ARY49ZQ5eu2ZtbNAphwjucM5zkKQxbDWgAPeaEfNN6J, ETH: 0x9D4E74752a3CBc8C4aA1bB59640FC949d88240dc, ETH: 0x016b66c56523CE0095842250E700f2b7E5D05449, DOGE:grow absorb target usage island odor method zebra collect analyst kitten unfair legal diamond average vote floor decrease stairs arctic draw naive carpet juice
+https://viapool-hwfgvhz41-tonyromerohuerta3gmailcom.vercel.app xpub6Cv4HuwoG1pMNZtrhFVUn6FeEVgxVARNoqKpfqNVFe2ZN6oJWxJELwQhFWsRs85vf14YuhdHZhWFHp2gzozpvFC9XqMfCebqtBhZnz7PVFF, LTC: xpub6By5KG8sq9vqMGoJLT38pU2HhxoyZJismSbtbevCMoyd6g4tRQvmZF1LQ8K3ppa9hWjJGRFRq7YGAAq1FgR8Fgz9DZK1aSZuMRmZHNRsVug, BTC: xpub6D429GZCuEbBomALJEmuL2JvUchtywLvQ3MRALemFQDjxa8r19dFFqFzow5CUqZWrWzMXyQvf8fzDhocbt1r5LHgaxGNjkkhyHXSgA4PCZD ARY49ZQ5eu2ZtbNAphwjucM5zkKQxbDWgAPeaEfNN6J, ETH: 0x9D4E74752a3CBc8C4aA1bB59640FC949d88240dc, ETH: 0x016b66c56523CE0095842250E700f2b7E5D05449, DOGE:vc env add NPM_RC [environment] < /path/to/.npmrc3LSaP3SS7BkipxnWyhVY5q6Za7wNH1J3iCDNEebwghs4unWtMdS5phtr6wKXgA3NEPZL0x942aAee22181f7744fDFdBBC7bb9D3a8022e8128vc env add NPM_RC [environment] < /path/to/.npmrcnpm i @vercel/speed-insights'use client';
+
+import type { PutBlobResult } from '@vercel/blob';
+import { useState, useRef } from 'react';
+
+export default function AvatarUploadPage() {
+  const inputFileRef = useRef<HTMLInputElement>(null);
+  const [blob, setBlob] = useState<PutBlobResult | null>(null);
+  return (
+    <>
+      <h1>Upload Your Avatar</h1>
+
+      <form
+        onSubmit={async (event) => {
+          event.preventDefault();
+
+          if (!inputFileRef.current?.files) {
+            throw new Error("No file selected");
+          }
+
+          const file = inputFileRef.current.files[0];
+
+          const response = await fetch(
+            `/api/avatar/upload?filename=${file.name}`,
+            {
+              method: 'POST',
+              body: file,
+            },
+          );
+
+          const newBlob = (await response.json()) as PutBlobResult;
+
+          setBlob(newBlob);
+        }}
+      >
+        <input name="file" ref={inputFileRef} type="file" required />
+        <button type="submit">Upload</button>
+      </form>
+      {blob && (
+        <div>
+          Blob url: <a href={blob.url}>{blob.url}</a>
+        </div>
+      )}
+    </>
+  );
+} xpub6Cv4HuwoG1pMNZtrhFVUn6FeEVgxVARNoqKpfqNVFe2ZN6oJWxJELwQhFWsRs85vf14YuhdHZhWFHp2gzozpvFC9XqMfCebqtBhZnz7PVFF, LTC: xpub6By5KG8sq9vqMGoJLT38pU2HhxoyZJismSbtbevCMoyd6g4tRQvmZF1LQ8K3ppa9hWjJGRFRq7YGAAq1FgR8Fgz9DZK1aSZuMRmZHNRsVug, BTC: xpub6D429GZCuEbBomALJEmuL2JvUchtywLvQ3MRALemFQDjxa8r19dFFqFzow5CUqZWrWzMXyQvf8fzDhocbt1r5LHgaxGNjkkhyHXSgA4PCZD LTC: xpub6By5KG8sq9vqMGoJLT38pU2HhxoyZJismSbtbevCMoyd6g4tRQvmZF1LQ8K3ppa9hWjJGRFRq7YGAAq1FgR8Fgz9DZK1aSZuMRmZHNRsVug, BTC: xpub6D429GZCuEbBomALJEmuL2JvUchtywLvQ3MRALemFQDjxa8r19dFFqFzow5CUqZWrWzMXyQvf8fzDhocbt1r5LHgaxGNjkkhyHXSgA4PCZD
 of this software dedicate any and all copyright interest in the
 software to the public domain. We make this dedication for the benefit
 of the public at large and to the detriment of our heirs and
