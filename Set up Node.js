@@ -1,7 +1,7 @@
 - name: Set up Node.js
          uses: actions/setup-node@v3
          with:                         
-              node-version: 16
+               node-version: 16
 
        # Step 3: Install dependencies
        - name: Install dependencies
