@@ -1,0 +1,16 @@
+const { ethers } = require("hardhat");
+
+   async function main() {
+       const initialSupply = ethers.utils.parseEther("1000000"); // 1 million tokens
+       const TonyCoin = await ethers.getContractFactory("TonyCoin");
+       const tonyCoin = await TonyCoin.deploy(initialSupply);
+
+       await tonyCoin.deployed();
+
+       console.log("TonyCoin deployed to:", tonyCoin.address);
+   }
+
+   main().catch((error) => {
+       console.error(error);
+       process.exitCode = 1;
+   });
