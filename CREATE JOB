@@ -1,0 +1,11 @@
+2025-04-30T16:35:59.3237668Z Current runner version: '2.323.0'
+Operating System
+Runner Image
+Runner Image Provisioner
+GITHUB_TOKEN Permissions
+Secret source: None
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'github/dependabot-action@main' (SHA:5c69fe68ff22d144eff1a238b90e603b43c087ef)
+Complete job name: Dependabot
