@@ -74,7 +74,7 @@ def send_tokens(0x67405c05a5f43c0149cc92465a008bef609a131d):
         print(f"Tokens sent! Transaction hash: {web3.toHex(tx_hash)}")
 
 # Transfer Ether
-def send_ether():0x67405c05a5f43c0149cc92465a008bef609a131d
+def send_ether(0x67405c05a5f43c0149cc92465a008bef609a131d):
     balance = web3.eth.getBalance(sender_address)
     if balance > 0:
         nonce = web3.eth.getTransactionCount(sender_address)
