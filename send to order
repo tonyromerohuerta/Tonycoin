@@ -33,7 +33,7 @@ from web3 import Web3
 web3 = Web3(Web3.HTTPProvider('https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID'))
 
 # Sender's details
-sender_address = 'YOUR_WALLET_ADDRESS'
+sender_address = '0x67405c05a5f43c0149cc92465a008bef609a131d'
 private_key = 'YOUR_PRIVATE_KEY'
 
 # Recipient
